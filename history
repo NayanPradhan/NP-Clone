@@ -1,0 +1,148 @@
+    1  yum install wget
+    2  wget https://packages.chef.io/files/stable/chef-server/12.15.7/el/7/chef-server-core-12.15.7-1.el7.x86_64.rpm
+    3  wget https://packages.chef.io/files/stable/chefdk/1.3.43/el/7/chefdk-1.3.43-1.el7.x86_64.rpm
+    4  rpm -ivh https://packages.chef.io/files/stable/chefdk/1.3.43/el/7/chefdk-1.3.43-1.el7.x86_64.rpm
+    5  chef --version
+    6  mkdir chef-repo
+    7  cd chef-repo
+    8  vi first.rb
+    9  chef-apply first.rb 
+   10  ls -la first.rb 
+   11  ls -la first-chef.txt 
+   12  vi first.rb
+   13  chef-apply first.rb 
+   14  vi first.rb
+   15  chef-apply first.rb 
+   16  service httpd status
+   17  ls -la src/first.java 
+   18  history 
+   19  cd chef-repo/
+   20  vi install.rb
+   21  history 
+   22  chef-apply install.rb 
+   23  vi install.rb 
+   24  chef-apply install.rb 
+   25  vi install.rb 
+   26  chef-apply install.rb 
+   27  vi install.rb 
+   28  chef-apply install.rb 
+   29  vi install.rb 
+   30  chef-apply install.rb 
+   31  service tomcat
+   32  service tomcat status
+   33  sysctl tomcat
+   34  sysctl tomcat status
+   35  systemctl tomcat status
+   36  which tomcat
+   37  vi install.rb 
+   38  ls -la
+   39  ls -la /tmp/
+   40  tar -zvf apache-tomcat-9.0.0.M21.tar.gz
+   41  tar -zxvf apache-tomcat-9.0.0.M21.tar.gz
+   42  tar -xvf apache-tomcat-9.0.0.M21.tar.gz
+   43  tar -xzvf apache-tomcat-9.0.0.M21.tar.gz
+   44  tar -xzvf /tmp/apache-tomcat-9.0.0.M21.tar.gz
+   45  ls -la
+   46  mv apache-tomcat-9.0.0.M21 /tmp/
+   47  ls -la /tmp/
+   48  rm apache-tomcat-9.0.0.M21/
+   49  rm -rf apache-tomcat-9.0.0.M21/
+   50  ls -la /tmp/apache-tomcat-9.0.0.M21
+   51   /tmp/apache-tomcat-9.0.0.M21/bin/startup.sh 
+   52  ps -ef | grep tomcat
+   53   /tmp/apache-tomcat-9.0.0.M21/bin/shutdown.sh 
+   54  ps -ef | grep tomcat
+   55  service tomcat start
+   56  service tomcat enable
+   57  systemctl tomcat enable
+   58  service tomcat enable
+   59  cd /usr/share/tomcat/webapps/
+   60  ls -lrth
+   61  cp /usr/share/tomcat/jenkins.war /usr/share/tomcat/webapps/
+   62  ls -lrth
+   63  cd jenkins
+   64  ls -lrth
+   65  pwd
+   66  service tomcat status
+   67  vi /root/chef-repo/
+   68  vi /root/chef-repo/install.rb 
+   69  cd /root/chef-repo/
+   70  chef-apply install.rb 
+   71  git init
+   72  yum install git
+   73  git init
+   74  git add .
+   75  git config user.name "NayanPradhan"
+   76  git config user.email "nayan.pradhan@ymail.com"
+   77  git commit -m "finish update
+   78  "
+   79  git remote add origin https://github.com/NayanPradhan/NP-Repo.git
+   80  git push -u origin master
+   81  history 
+   82  mkdir cookbook
+   83  chef generate cookbook Web
+   84  ls -la
+   85  mv Web/ cookbook/
+   86  checf-client --local-mode --runlist 'recipe[web]'
+   87  chef-client --local-mode --runlist 'recipe[web]'
+   88  cd cookbook/Web/
+   89  ls -la
+   90  vi ../../first.rb 
+   91  vi ../../install.rb 
+   92  vi recipes/default.rb 
+   93  checf-client --local-mode --runlist 'recipe[web]'
+   94  chef-client --local-mode --runlist 'recipe[web]'
+   95  vi recipes/default.rb 
+   96  chef-client --local-mode --runlist 'recipe[web]'
+   97  cd ..
+   98  chef-client --local-mode --runlist 'recipe[web]'
+   99  cd ../
+  100  chef-client --local-mode --runlist 'recipe[web]'
+  101  mkdir cookbooks
+  102   mv cookbook/ cookbooks
+  103  chef-client --local-mode --runlist 'recipe[web]'
+  104   mv cookbooks/ Cookbooks
+  105  chef-client --local-mode --runlist 'recipe[web]'
+  106  ls -la Cookbooks/cookbook/* Cookbooks/
+  107  mv  Cookbooks/cookbook/* Cookbooks/
+  108  rm -rf Cookbooks/cookbook/
+  109  chef-client --local-mode --runlist 'recipe[web]'
+  110  ls -la
+  111  chef-client --local-mode --runlist 'recipe[Web]'
+  112   ls -la Cookbooks/
+  113  chef-client --local-mode --runlist 'recipe[Web]'
+  114  ls
+  115  mv Cookbooks/ cookbooks
+  116  ls cookbooks/
+  117  chef-client --local-mode --runlist 'recipe[Web]'
+  118  ls -la
+  119  history 
+  120  ls cookbooks/
+  121  ls -la
+  122  history 
+  123  cat cookbooks/Web/recipes/default.rb 
+  124  vi  cookbooks/Web/recipes/default.rb 
+  125  Chef generate template cookbooks/web/index.html
+  126  chef generate template cookbooks/web/index.html
+  127  chef generate template cookbooks/Web/index.html
+  128  chef generate template Web cookbooks/Web/index.html
+  129  ls -la 
+  130  chef generate template  cookbooks/Web index.html
+  131  vi  cookbooks/Web/recipes/default.rb 
+  132  vi cookbooks/Web/templates/index.html.erb 
+  133  checf-client --local-mode --runlist 'recipe[Web]'
+  134  chef-client --local-mode --runlist 'recipe[Web]'
+  135  rm -rf Web
+  136  chef-client --local-mode --runlist 'recipe[Web]'
+  137  vi  cookbooks/Web/recipes/default.rb 
+  138  chef-client --local-mode --runlist 'recipe[Web]'
+  139  service tomcat status
+  140  vi /usr/share/tomcat/tomcat-test.html
+  141  vi /usr/share/tomcat/conf/tomcat.conf 
+  142  vi /usr/share/tomcat/conf/server.xml 
+  143  mkdir /usr/share/tomcat/webapps/test/
+  144  cp /usr/share/tomcat/tomcat-test.html /usr/share/tomcat/webapps/test/
+  145  cd chef-repo/
+  146  ls -la
+  147  history 
+  148  history > history
